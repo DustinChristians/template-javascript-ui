@@ -1,1 +1,1 @@
-internal-javascript-messages-ui
+template-javascript-ui
