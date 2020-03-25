@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-sass-guidelines"
+  ],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "function-name-case": null,
+    "color-hex-case": "lower",
+    "color-named": "always-where-possible",
+    "property-no-vendor-prefix": false,
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-alphabetical-order": [true, { "severity": "warning" }]
+  }
+}
