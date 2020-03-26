@@ -109,6 +109,13 @@ select {
   text-transform: none; //1//
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
 //Correct the inability to style clickable types in iOS and Safari
 button,
 [type='button'],

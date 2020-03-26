@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- To ensure proper rendering and touch zooming for all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Javascript UI Template</title>
   </head>
   <body>
@@ -53,6 +54,39 @@
       <button>Button</button>
 
       <h2 class="heading bold">Form Inputs</h2>
+
+      <form class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="firstName">First name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="" value="" required />
+          <div class="invalid-feedback">
+            A first name is required.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Email <span class="text-muted">(Optional)</span></label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com" />
+          <div class="invalid-feedback">
+            Please enter a valid email address.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="state">State</label>
+          <select class="custom-select d-block w-100" id="state" required>
+            <option value="">Select a State...</option>
+            <option>Michigan</option>
+            <option>Texas</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a state.
+          </div>
+        </div>
+
+        <hr class="mb-4" />
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+      </form>
     </div>
   </body>
 </html>
