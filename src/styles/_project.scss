@@ -1,8 +1,10 @@
 @import 'project/_variables';
 
+// Layout
+@import 'project/layout/_header';
+@import 'project/layout/_page';
+@import 'project/layout/_footer';
+
 // Elements
-@import 'project/elements/_forms';
 @import 'project/elements/_headings';
 @import 'project/elements/_actions';
-@import 'project/elements/_lists';
-@import 'project/elements/_text-containers';
