@@ -2,15 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- To ensure proper rendering and touch zooming for all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Javascript UI Template</title>
   </head>
   <body>
     <header>
-      <h1>Header</h1>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Fixed navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline mt-2 mt-md-0">
+            <input
+              class="form-control mr-sm-2"
+              type="text"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
     </header>
-    <div class="container">
-      <h2 class="heading bold">Headings</h2>
+
+    <main role="main" class="container">
+      <h2 class="display-4">Headings</h2>
+      <hr />
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
@@ -18,7 +56,8 @@
       <h5>Heading 5</h5>
       <h6>Heading 6</h6>
 
-      <h2 class="heading bold">Text Containers</h2>
+      <h2 class="display-4 mt-5">Text Containers</h2>
+      <hr />
 
       <h3>Paragraph</h3>
       <p>This is a paragraph.</p>
@@ -29,7 +68,8 @@
         <span class="author">- Anonymous</span>
       </blockquote>
 
-      <h2 class="heading bold">Lists</h2>
+      <h2 class="display-4 mt-5">Lists</h2>
+      <hr />
 
       <h3>Unordered List</h3>
       <ul>
@@ -45,14 +85,57 @@
         <li>Milk</li>
       </ol>
 
-      <h2 class="heading bold">Others</h2>
+      <h2 class="display-4 mt-5">Others</h2>
+      <hr />
+
       <div>This is a div.</div>
 
-      <h2 class="heading bold">Actions</h2>
+      <h2 class="display-4 mt-5">Actions</h2>
+      <hr />
       <a>Anchor</a>
       <button>Button</button>
 
-      <h2 class="heading bold">Form Inputs</h2>
-    </div>
+      <h2 class="display-4 mt-5">Form Inputs</h2>
+      <hr />
+
+      <form class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="firstName">First name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="" value="" required />
+          <div class="invalid-feedback">
+            A first name is required.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Email <span class="text-muted">(Optional)</span></label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com" />
+          <div class="invalid-feedback">
+            Please enter a valid email address.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="state">State</label>
+          <select class="custom-select d-block w-100" id="state" required>
+            <option value="">Select a State...</option>
+            <option>Michigan</option>
+            <option>Texas</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a state.
+          </div>
+        </div>
+
+        <hr class="mb-4" />
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
   </body>
 </html>
