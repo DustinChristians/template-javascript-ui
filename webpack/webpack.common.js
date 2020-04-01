@@ -25,8 +25,12 @@ module.exports = {
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
-      template: Path.resolve(__dirname, '../src/fetching.html'),
-      filename: 'fetching.html'
+      template: Path.resolve(__dirname, '../src/app.html'),
+      filename: 'app.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: Path.resolve(__dirname, '../src/form.html'),
+      filename: 'form.html'
     })
   ],
   resolve: {
