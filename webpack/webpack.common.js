@@ -5,55 +5,59 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: Path.resolve(__dirname, '../src/scripts/index.js')
+    app: Path.resolve(__dirname, '../src/scripts/index.js'),
   },
   output: {
     path: Path.join(__dirname, '../build'),
-    filename: 'js/[name].js'
+    filename: 'js/[name].js',
   },
   optimization: {
     splitChunks: {
       chunks: 'all',
-      name: false
-    }
+      name: false,
+    },
   },
   plugins: [
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([{ from: Path.resolve(__dirname, '../public'), to: 'public' }]),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/index.html'),
-      filename: 'index.html'
+      filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/app.html'),
-      filename: 'app.html'
+      filename: 'app.html',
     }),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/form.html'),
-      filename: 'form.html'
-    })
+      filename: 'form.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: Path.resolve(__dirname, '../src/images/background-image.jpg'),
+      filename: 'background-image.jpg',
+    }),
   ],
   resolve: {
     alias: {
-      '~': Path.resolve(__dirname, '../src')
-    }
+      '~': Path.resolve(__dirname, '../src'),
+    },
   },
   module: {
     rules: [
       {
         test: /\.mjs$/,
         include: /node_modules/,
-        type: 'javascript/auto'
+        type: 'javascript/auto',
       },
       {
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
         use: {
           loader: 'file-loader',
           options: {
-            name: '[path][name].[ext]'
-          }
-        }
-      }
-    ]
-  }
+            name: '[path][name].[ext]',
+          },
+        },
+      },
+    ],
+  },
 };
