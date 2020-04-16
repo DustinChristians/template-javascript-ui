@@ -3,3 +3,16 @@
     height: 180px;
   }
 }
+
+.card-grid-3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start, space-around;
+  margin-right: -2%;
+
+  .card {
+    flex: 0 0 31.33%; // (100% - (3 margins * 2%)) / 3 items
+    margin-bottom: 2%;
+    margin-right: 2%;
+  }
+}
