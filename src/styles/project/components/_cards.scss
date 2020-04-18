@@ -11,8 +11,12 @@
   margin-right: -2%;
 
   .card {
-    flex: 0 0 31.33%; // (100% - (3 margins * 2%)) / 3 items
+    flex: 0 0 1; // (100% - (3 margins * 2%)) / 3 items
     margin-bottom: 2%;
     margin-right: 2%;
+
+    @include tablet-and-desktop {
+      flex: 0 0 31.33%; // (100% - (3 margins * 2%)) / 3 items
+    }
   }
 }
