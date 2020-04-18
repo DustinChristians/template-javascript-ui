@@ -4,6 +4,16 @@
   }
 }
 
+.card-deck {
+  @include mobile {
+    display: block;
+
+    .card {
+      margin-bottom: 2%;
+    }
+  }
+}
+
 .card-grid-3 {
   display: flex;
   flex-wrap: wrap;
@@ -11,7 +21,7 @@
   margin-right: -2%;
 
   .card {
-    flex: 0 0 1; // (100% - (3 margins * 2%)) / 3 items
+    display: block;
     margin-bottom: 2%;
     margin-right: 2%;
 
