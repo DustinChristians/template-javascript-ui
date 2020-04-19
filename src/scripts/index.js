@@ -5,4 +5,5 @@ import 'bootstrap';
 import '../styles/styles.scss';
 
 // Custom Scripts
-import '../scripts/forms/validation.js';
+import './project/forms/validation.js';
+import './project/navigation.js';
