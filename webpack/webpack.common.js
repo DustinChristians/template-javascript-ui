@@ -33,8 +33,8 @@ module.exports = {
       filename: 'form.html',
     }),
     new HtmlWebpackPlugin({
-      template: Path.resolve(__dirname, '../src/images/background-image.jpg'),
-      filename: 'background-image.jpg',
+      template: Path.resolve(__dirname, '../src/images/large-gray.jpg'),
+      filename: 'large-gray.jpg',
     }),
   ],
   resolve: {
